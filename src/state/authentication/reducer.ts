@@ -1,4 +1,5 @@
-import { IAuthenticationContextData, IUser } from "./context";
+import { IUser } from "../../types";
+import { IAuthenticationContextData } from "./types";
 
 export type Actions =
   | { type: "login"; username: string; password: string }
