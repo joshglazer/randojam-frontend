@@ -10,7 +10,11 @@ export const JamsReducer = (
     // Accept an array of File objects and transform them into the structure used by the Queue components
     case "loadJams":
       // TODO: api call to get jam data
-      return state;
+      return {
+        myJams: [],
+        collabJams: [],
+        ...state,
+      };
 
     default:
       return state;
