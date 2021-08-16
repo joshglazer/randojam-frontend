@@ -8,10 +8,10 @@ import {
 import React, { useContext } from "react";
 import { Header } from "semantic-ui-react";
 import * as Yup from "yup";
-import { AuthenticationContext } from "../../state/authentication/context";
+import { GlobalContext } from "../../state/GlobalProvider";
 
 function Login() {
-  const { dispatch } = useContext(AuthenticationContext);
+  const { authenticationDispatch } = useContext(GlobalContext);
 
   const initialValues = {
     username: "",
@@ -33,7 +33,7 @@ function Login() {
         validationSchema={LoginValidationSchema}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            dispatch({
+            authenticationDispatch({
               type: "login",
               username: values.username,
               password: values.password,

@@ -4,13 +4,13 @@ import "semantic-ui-css/semantic.min.css";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import App from "./routes";
-import { AuthenticationProvider } from "./state/authentication/context";
+import { GlobalProvider } from "./state/GlobalProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AuthenticationProvider>
+    <GlobalProvider>
       <App />
-    </AuthenticationProvider>
+    </GlobalProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

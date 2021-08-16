@@ -1,26 +1,26 @@
 import React, { useContext } from "react";
-import { Grid, Header, Image, Item } from "semantic-ui-react";
-import { AuthenticationContext } from "../../state/authentication/context";
+import { Header, Item } from "semantic-ui-react";
+import { GlobalContext } from "../../state/GlobalProvider";
 
 function Profile() {
-  const { state } = useContext(AuthenticationContext);
+  const { authenticationState } = useContext(GlobalContext);
 
   return (
     <>
       <Header as="h2">My Profile</Header>
-      {state.user && (
+      {authenticationState.user && (
         <Item.Group>
           <Item>
-            <Item.Image size="small" src={state.user?.imageUrl} circular />
+            <Item.Image
+              size="small"
+              src={authenticationState.user?.imageUrl}
+              circular
+            />
             <Item.Content>
               <Item.Header as="a">
-                {state.user.firstName} {state.user.lastName}
+                {authenticationState.user.firstName}{" "}
+                {authenticationState.user.lastName}
               </Item.Header>
-              {/* <Item.Meta>Description</Item.Meta>
-            <Item.Description>
-              <Image src={state.user?.imageUrl} size="medium" circular />
-            </Item.Description>
-            <Item.Extra>Additional Details</Item.Extra> */}
             </Item.Content>
           </Item>
         </Item.Group>
