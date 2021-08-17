@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Container, Dropdown, Header, Image, Menu } from "semantic-ui-react";
-import { GlobalContext } from "../../state/GlobalProvider";
+import { GlobalContext } from "state/GlobalProvider";
 
 interface INavItem {
   name: string;

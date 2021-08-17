@@ -1,4 +1,4 @@
-import { IUser } from "../../types";
+import { IUser } from "types";
 import { IAuthenticationContextData } from "./types";
 
 export type Actions =

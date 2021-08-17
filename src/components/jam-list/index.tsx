@@ -1,7 +1,7 @@
+import { Jam } from "components/jam";
 import React from "react";
 import { Grid, Header } from "semantic-ui-react";
-import { IJam } from "../../types";
-import { Jam } from "../jam";
+import { IJam } from "types";
 
 interface Props {
   title: string;

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Redirect, Route } from "react-router";
 import { RouteProps } from "react-router-dom";
-import { GlobalContext } from "../state/GlobalProvider";
+import { GlobalContext } from "state/GlobalProvider";
 
 interface IAuthRouteProps extends RouteProps {
   type: string;

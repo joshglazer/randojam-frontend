@@ -1,15 +1,15 @@
+import PageFooter from "components/page-footer";
+import PageHeader from "components/page-header";
 import React, { lazy, ReactElement, Suspense } from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
 import { Container } from "semantic-ui-react";
-import PageFooter from "../components/page-footer";
-import PageHeader from "../components/page-header";
 import AuthRoute from "./AuthRoute";
 
-const Home = lazy(() => import("../views/home"));
-const Login = lazy(() => import("../views/login"));
-const SignUp = lazy(() => import("../views/signup"));
-const Dashboard = lazy(() => import("../views/dashboard"));
-const Profile = lazy(() => import("../views/profile"));
+const Home = lazy(() => import("views/home"));
+const Login = lazy(() => import("views/login"));
+const SignUp = lazy(() => import("views/signup"));
+const Dashboard = lazy(() => import("views/dashboard"));
+const Profile = lazy(() => import("views/profile"));
 
 const IndexRouter: React.FC = (): ReactElement => {
   return (

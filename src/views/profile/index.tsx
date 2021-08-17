@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Header, Item } from "semantic-ui-react";
-import { GlobalContext } from "../../state/GlobalProvider";
+import { GlobalContext } from "state/GlobalProvider";
 
 function Profile() {
   const { authenticationState } = useContext(GlobalContext);

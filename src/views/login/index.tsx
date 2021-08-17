@@ -7,8 +7,8 @@ import {
 } from "formik-semantic-ui-react";
 import React, { useContext } from "react";
 import { Header } from "semantic-ui-react";
+import { GlobalContext } from "state/GlobalProvider";
 import * as Yup from "yup";
-import { GlobalContext } from "../../state/GlobalProvider";
 
 function Login() {
   const { authenticationDispatch } = useContext(GlobalContext);
