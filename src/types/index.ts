@@ -7,7 +7,9 @@ export interface IUser {
 }
 
 export interface IJam {
-  userID: string;
   name: string;
+  description: string;
+  creatorUserID: string;
+  collabUserIDs: string[];
   tags: string[];
 }
