@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Item } from "semantic-ui-react";
-import { GlobalContext } from "../../state/GlobalProvider";
-import { IJam } from "../../types";
+import { GlobalContext } from "state/GlobalProvider";
+import { IJam } from "types";
 
 interface Props {
   jam: IJam;

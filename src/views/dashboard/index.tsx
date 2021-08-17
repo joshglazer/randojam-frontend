@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Header } from "semantic-ui-react";
-import { JamList } from "../../components/jam-list";
-import { GlobalContext } from "../../state/GlobalProvider";
+import { JamList } from "components/jam-list";
+import { GlobalContext } from "state/GlobalProvider";
 
 function Dashboard() {
   const { jamsDispatch, jamsState } = useContext(GlobalContext);
