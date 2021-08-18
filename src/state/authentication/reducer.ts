@@ -2,7 +2,9 @@ import { IUser } from "types";
 import { IAuthenticationContextData } from "./types";
 
 export type Actions =
-  | { type: "login"; username: string; password: string }
+  | { type: "login_request" }
+  | { type: "login_success"; accessToken: string }
+  | { type: "login_error" }
   | { type: "logout" };
 
 export const AuthenticationReducer = (
@@ -10,27 +12,39 @@ export const AuthenticationReducer = (
   action: Actions
 ): IAuthenticationContextData => {
   switch (action.type) {
-    // Accept an array of File objects and transform them into the structure used by the Queue components
-    case "login":
-      // TODO: api call to get token and user info
-      const token = "token-placeholder";
+    case "login_request":
+      return {
+        ...state,
+        isLoading: true,
+      };
+
+    case "login_success":
+      // TODO: grab real user info
       const user: IUser = {
         id: "id-placeholder",
         imageUrl: "https://www.fillmurray.com/300/300",
         firstName: "firstname-placeholder",
         lastName: "lastname-placeholder",
-        username: action.username,
+        username: "username-placeholder",
       };
+
       return {
         ...state,
-        token,
+        isLoading: false,
+        accessToken: action.accessToken,
         user,
+      };
+
+    case "login_error":
+      return {
+        ...state,
+        isLoading: false,
       };
 
     case "logout":
       return {
         ...state,
-        token: null,
+        accessToken: null,
         user: null,
       };
 

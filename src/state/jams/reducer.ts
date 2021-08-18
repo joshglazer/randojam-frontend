@@ -15,6 +15,7 @@ export const JamsReducer = (
         ...state,
         myJams: [
           {
+            id: "1",
             name: "Ska Jam",
             description: "A ska song I thought of back in 1997",
             creatorUserID: "1234",
@@ -22,6 +23,7 @@ export const JamsReducer = (
             tags: ["ska", "fast"],
           },
           {
+            id: "2",
             name: "Reggae Jam",
             description: "A reggae song",
             creatorUserID: "1234",
@@ -31,6 +33,7 @@ export const JamsReducer = (
         ],
         collabJams: [
           {
+            id: "3",
             name: "Hip Hop Jam",
             description:
               "A real banger of a hip hop song, it should be on the radio",
@@ -39,6 +42,7 @@ export const JamsReducer = (
             tags: ["hip hop", "rap", "catchy"],
           },
           {
+            id: "4",
             name: "reggae jam 2",
             description: "A reggae song inspired by the ocean",
             creatorUserID: "3234",

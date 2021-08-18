@@ -1,6 +1,12 @@
 import { IUser } from "types";
 
 export interface IAuthenticationContextData {
-  token: string | null;
+  isLoading: boolean;
+  accessToken: string | null;
   user: IUser | null;
+}
+
+export interface ILoginRequestPayload {
+  username: string;
+  password: string;
 }

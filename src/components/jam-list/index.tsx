@@ -18,7 +18,7 @@ export const JamList: React.FC<Props> = ({ title, emptyText, jams }) => {
           <Grid columns={4} stackable>
             <Grid.Row>
               {jams.map((jam) => (
-                <Grid.Column>
+                <Grid.Column key={jam.id}>
                   <Jam jam={jam} />
                 </Grid.Column>
               ))}

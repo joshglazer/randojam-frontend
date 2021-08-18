@@ -7,6 +7,7 @@ import {
 } from "formik-semantic-ui-react";
 import React, { useContext } from "react";
 import { Header } from "semantic-ui-react";
+import { loginUser } from "state/authentication/actions";
 import { GlobalContext } from "state/GlobalProvider";
 import * as Yup from "yup";
 
@@ -33,12 +34,10 @@ function Login() {
         validationSchema={LoginValidationSchema}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            authenticationDispatch({
-              type: "login",
+            loginUser(authenticationDispatch, {
               username: values.username,
               password: values.password,
-            });
-            setSubmitting(false);
+            }).then(() => setSubmitting(false));
           }, 400);
         }}
       >
