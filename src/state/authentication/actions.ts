@@ -10,12 +10,10 @@ export async function loginUser(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(loginPayload),
   };
-
   try {
     dispatch({ type: "login_request" });
     let response = await fetch(`/api/login`, requestOptions);
     let token = await response.json();
-
     if (token.access_token) {
       dispatch({ type: "login_success", accessToken: token.access_token });
     }
