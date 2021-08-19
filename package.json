@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/cypress": "^8.0.0",
+    "@testing-library/dom": "^8.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -10,6 +12,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.18",
     "@types/react-dom": "^17.0.0",
+    "cypress": "^8.3.0",
     "formik": "^2.2.9",
     "formik-semantic-ui-react": "^2.0.0",
     "history": "^5.0.1",
